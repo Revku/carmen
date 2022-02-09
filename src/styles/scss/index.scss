@@ -1,0 +1,142 @@
+$inputBg: #403E57;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial;
+}
+
+body, html {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/background.jpeg');
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    height: 80vh;
+    display: flex;
+}
+
+.form {
+    width: 50%;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    &__header {
+        text-align: center;
+    }
+
+    &__description {
+        margin-top: 25px;
+    }
+
+    &__label {
+        font-weight: 600;
+        display: block;
+        margin-top: 15px;
+    }
+    &__input {
+        background-color: $inputBg;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        color: white;
+        display: block;
+        width: 100%;
+
+        &--nowidth {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        padding: 10px 50px;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #9916FF 0%, #424FC2 104.62%);
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__buttonbox {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    &__fieldswrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    &__field {
+        width: 100%;
+    }
+}
+
+.result {
+    background-color: #403E57;
+    width: 50%;
+    height: 100%;
+    border-radius: 0px 15px 15px 0px;
+    padding: 30px;
+    overflow-y: scroll;
+
+    &__title {
+        font-size: 30px;
+        color: white;
+        border-bottom: 2px solid gray;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+    }
+}
+
+.item__title, .item__value {
+    font-size: 18px;
+    color: white;
+}
+
+.item__title {
+    font-weight: 600;
+}
+
+.card {
+    padding: 15px;
+    background-color: #5D5A7B;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1200px) {
+    .box {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .form, .result {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Site language -->
+<html lang="pl">
+<head>
+    <!-- Site settings -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site title -->
+    <title>Carmen - generator fałszywych informacji</title>
+
+    <!-- SEO Informations -->
+    <meta name="description" content="Carmen to prosta aplikacja służąca do generowania fałszywych informacji, takich jak imiona, nazwiska, adresy zamieszkania itd.">
+    <meta name="keywords" content="carmen faker falszywe dane imie nazwisko generator">
+    <meta name="author" content="@Revku">
+
+    <!-- Font (fonts.google.com) (poppins by default) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS styles -->
+    <link rel="stylesheet" href="./src/styles/css/index.css">
+</head>
+<body>
+    <div id="wrapper" class="wrapper">
+        <div class="box">
+            <div class="form">
+                <div class="form__header">
+                    <img src="./src/assets/logo.svg" alt="Carmen Logo" class="form__logo">
+                    <p class="form__description">Carmen to prosta aplikacja służąca do generowania fałszywych informacji, takich jak imiona, nazwiska, adresy zamieszkania itd.</p>
+                </div>
+                <div id="form" class="form__form">
+                    <label for="gender" class="form__label">Płeć</label>
+                    <select name="gender" id="gender" class="form__input" required>
+                        <option value="male">Mężczyzna</option>
+                        <option value="female">Kobieta</option>
+                    </select>
+                    <label for="country" class="form__label">Kraj pochodzenia</label>
+                    <select name="country" id="country" class="form__input" required>
+                        <option value="pl">Polska</option>
+                        <option value="en">Stany Zjednoczone</option>
+                        <option value="de">Niemcy</option>
+                    </select>
+                    <div class="form__fieldswrapper">
+                        <div class="form__field" style="margin-right: 10px;">
+                            <label for="minAge" class="form__label">Wiek min.</label>
+                            <input type="number" class="form__input form__input--nowidth" id="minAge" placeholder="Domyślnie: 1">
+                        </div>
+                        <div class="form__field">
+                            <label for="maxAge" class="form__label">Wiek max.</label>
+                            <input type="number" class="form__input form__input--nowidth" id="maxAge" placeholder="Domyślnie: 95">
+                        </div>
+                    </div>
+                
+                    <label for="phoneNumberFormat" class="form__label">Format numeru telefonu</label>
+                    <input type="text" class="form__input" id="phoneNumberFormat" placeholder="Domyślnie: ###-###-###">
+
+                    <div class="form__buttonbox">
+                        <button id="btn" type="submit" class="form__button">Generuj</button>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <h2 class="result__title">Wygenerowane informacje</h2>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="./src/scripts/index.js" type="module"></script>
+</body>
+</html>
